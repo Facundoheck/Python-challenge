@@ -20,7 +20,7 @@ for i in data:
 #elimino el indice de la lista
 fecha.pop(0)
 #cuento la cantidad de datos que existen en la lista (sin contar el indice)
-count=sum(1 for i in fecha)
+count=len(fecha)
 print('Total months: ', count)
 
 #-------------------------------------------------------------------------------------------------
@@ -40,9 +40,27 @@ print('Total: $',total)
 
 #-------------------------------------------------------------------------------------------------
 
+promedio= total / count
+
+print('Average change: $',promedio)
+
+
+#-------------------------------------------------------------------------------------------------
+
 #guardo el maximo de las ganancias en "maximo"
 maximo=max(profitorlosses_int)
 #itero sobre la lista de perdidas y ganancias paralelo a su fecha correspondiente
 for i,j in zip(fecha,profitorlosses_int):
+  #comparo el maximo con la lista de perdidas y ganancias
   if j == maximo:
-    print(i,' - ',j)
+    print('Greatest increase in profits:',i,' - ','($',j,')')
+
+#-------------------------------------------------------------------------------------------------
+
+#guardo el minimo de las ganancias en "minimo"
+minimo=min(profitorlosses_int)
+#itero sobre la lista de perdidas y ganancias paralelo a su fecha correspondiente
+for i,j in zip(fecha,profitorlosses_int):
+  #comparo el maximo con la lista de perdidas y ganancias
+  if j == minimo:
+    print('Greatest decrease in profits:',i,' - ','($',j,')')
