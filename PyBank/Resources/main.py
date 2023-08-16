@@ -21,7 +21,7 @@ for i in data:
 fecha.pop(0)
 #cuento la cantidad de datos que existen en la lista (sin contar el indice)
 count=len(fecha)
-print('Total months: ', count)
+print_count=f"Total months: {count}"
 
 #-------------------------------------------------------------------------------------------------
 
@@ -36,13 +36,13 @@ profitorlosses_int=list(map(int,profitorlosses))
 #los sumo y los guardo en una nueva variable "total"
 total=sum(profitorlosses_int)
 
-print('Total: $',total)
+print_total=f"Total: ${total}"
 
 #-------------------------------------------------------------------------------------------------
 
 promedio= total / count
 
-print('Average change: $',promedio)
+print_prom=f"Average change: ${promedio}"
 
 
 #-------------------------------------------------------------------------------------------------
@@ -53,7 +53,7 @@ maximo=max(profitorlosses_int)
 for i,j in zip(fecha,profitorlosses_int):
   #comparo el maximo con la lista de perdidas y ganancias
   if j == maximo:
-    print('Greatest increase in profits:',i,' - ','($',j,')')
+    print_max=f"Greatest increase in profits: {i} - ${j}"
 
 #-------------------------------------------------------------------------------------------------
 
@@ -63,4 +63,17 @@ minimo=min(profitorlosses_int)
 for i,j in zip(fecha,profitorlosses_int):
   #comparo el maximo con la lista de perdidas y ganancias
   if j == minimo:
-    print('Greatest decrease in profits:',i,' - ','($',j,')')
+    print_min=f"Greatest decrease in profits: {i} - ${j}"
+
+#-------------------------------------------------------------------------------------------------
+
+#guardo en una lista los resultados de las operaciones anteriores
+resultados=[print_count,print_total,print_prom,print_max,print_min]
+#abro el archivo en modo escritura, si no existe se crea uno automaticamente
+with open("soluciones.txt", "w") as archivo:
+    archivo.write("Financial Analysis" + "\n\n" + "-"*50 + "\n\n")
+    for resultado in resultados:
+      #escribe el resultado en el archivo
+      archivo.write(str(resultado) + "\n\n")
+
+print("Resultado exportado al archivo 'soluciones.txt'")
