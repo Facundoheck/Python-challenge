@@ -23,7 +23,7 @@ fecha.pop(0)
 count=sum(1 for i in fecha)
 print('Total months: ', count)
 
-######################################################################################################
+#-------------------------------------------------------------------------------------------------
 
 #inicializo la lista que voy a extraer de "data" 
 profitorlosses=[]
@@ -31,7 +31,18 @@ for i in data:
     profitorlosses.append(i[1])
 #elimino el indice de la lista
 profitorlosses.pop(0)
-#convierto los datos de la lista a enteros, los sumo y los guardo en una nueva variable "total"
-total=sum(list(map(int,profitorlosses)))
+#convierto la lista de ganancias y perdidas a tipo entero
+profitorlosses_int=list(map(int,profitorlosses))
+#los sumo y los guardo en una nueva variable "total"
+total=sum(profitorlosses_int)
 
 print('Total: $',total)
+
+#-------------------------------------------------------------------------------------------------
+
+#guardo el maximo de las ganancias en "maximo"
+maximo=max(profitorlosses_int)
+#itero sobre la lista de perdidas y ganancias paralelo a su fecha correspondiente
+for i,j in zip(fecha,profitorlosses_int):
+  if j == maximo:
+    print(i,' - ',j)
