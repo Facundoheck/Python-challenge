@@ -81,3 +81,12 @@ candidato_ganador=list(candidatos_y_votos.keys())[list(candidatos_y_votos.values
 print_candidato_ganador=f"Winner: {candidato_ganador}"
 
 #----------------------------------------------------------------------
+
+#abro el archivo en modo escritura, si no existe se crea uno automaticamente
+with open('soluciones.txt','w') as soluciones:
+    soluciones.write("Election results:" + "\n\n" + "-"*50 + "\n\n")
+    soluciones.write(print_total_votes + "\n\n" + "-"*50 + "\n\n")
+    soluciones.write(print_charles_votes + "\n\n" + print_diana_votes + "\n\n" + print_raymon_votes +"\n\n" + print_nulo_votes + "\n\n" + "-"*50 + "\n\n")
+    soluciones.write(print_candidato_ganador + "\n\n" + "-"*50)
+
+print("Resultado exportado al archivo 'soluciones.txt'")
