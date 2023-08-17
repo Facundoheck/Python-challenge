@@ -56,3 +56,10 @@ percent_charles_votes=Porcentajes(charles_votes)
 percent_diana_votes=Porcentajes(diana_votes)
 percent_raymon_votes=Porcentajes(raymon_votes)
 percent_nulos_votes=Porcentajes(nulos_votes)
+
+print_charles_votes=f"Charles Casper Stockham: {percent_charles_votes}% ({charles_votes})"
+print_diana_votes=f"Diana DeGette: {percent_diana_votes}% ({diana_votes})"
+print_raymon_votes=f"Raymon Anthony Doane: {percent_raymon_votes}% ({raymon_votes})"
+print_nulo_votes=f"Nulos: {percent_nulos_votes}% ({nulos_votes})"
+
+#----------------------------------------------------------------------
