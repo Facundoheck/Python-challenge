@@ -40,7 +40,7 @@ print_total=f"Total: ${total}"
 
 #-------------------------------------------------------------------------------------------------
 
-promedio= total / count
+promedio= round((total / count), 2)
 
 print_prom=f"Average change: ${promedio}"
 
