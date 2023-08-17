@@ -63,3 +63,21 @@ print_raymon_votes=f"Raymon Anthony Doane: {percent_raymon_votes}% ({raymon_vote
 print_nulo_votes=f"Nulos: {percent_nulos_votes}% ({nulos_votes})"
 
 #----------------------------------------------------------------------
+
+#diccionario con los candidatos y los votos que obtuvo cada uno
+candidatos_y_votos={
+                        "Charles Casper Stockham":charles_votes,
+                        "Diana DeGette":diana_votes,
+                        "Raymon Anthony Doane":raymon_votes,
+                        "Nulos":nulos_votes
+                        }
+
+#la mayor cantidad de votos
+maximo_votos=max(candidatos_y_votos.values())
+
+#el candidato que recibió la mayor cantidad de votos
+candidato_ganador=list(candidatos_y_votos.keys())[list(candidatos_y_votos.values()).index(maximo_votos)]
+
+print_candidato_ganador=f"Winner: {candidato_ganador}"
+
+#----------------------------------------------------------------------
