@@ -1,8 +1,8 @@
 ## PyBank Instructions
-<p>In this Challenge, you are tasked with creating a Python script to analyze the financial records of your company. You will be given a financial dataset called budget_data.csv. The dataset is composed of two columns: "Date" and "Profit/Losses".</p>
-<p>Your task is to create a Python script that analyzes the records to calculate each of the following values:</p>
-<p>• The total number of months included in the dataset</p>
-<p>• The net total amount of "Profit/Losses" over the entire period</p>
-<p>• The changes in "Profit/Losses" over the entire period, and then the average of those changes</p>
-<p>• The greatest increase in profits (date and amount) over the entire period</p>
-<p>• The greatest decrease in profits (date and amount) over the entire period</p>
+<p>En este desafío, tiene la tarea de crear un script de Python para analizar los registros financieros de una empresa. Se le proporcionará un conjunto de datos financieros llamado budget_data.csv. El conjunto de datos se compone de dos columnas: "Fecha" y "Beneficios/Pérdidas".</p>
+<p>Su tarea es crear un script de Python que analice los registros para calcular cada uno de los siguientes valores:</p>
+<p>• El número total de meses incluidos en el conjunto de datos</p>
+<p>• La cantidad total neta de "Ganancias/Pérdidas" durante todo el período</p>
+<p>• Los cambios en "Ganancias/Pérdidas" durante todo el período, y luego el promedio de esos cambios</p>
+<p>• El mayor aumento en las ganancias (fecha y monto) durante todo el período</p>
+<p>• La mayor disminución en las ganancias (fecha y monto) durante todo el período</p>
